@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
 func main() {
-	js := map[string]string{"name": "jeongseop", "age": "30"} //map[key]value
+	favFood := []string{"kimchi", "chicken"}
+	js := person{name: "jeongseop", age: 30, favFood: favFood}
 	fmt.Println(js)
-	for key, value := range js {
-		fmt.Println(key, value)
-	}
 }
