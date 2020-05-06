@@ -2,54 +2,11 @@ package main
 
 import "fmt"
 
-// func lenAndUpper(name string) (int, string) { //... arg 여러개 받을 수 있음.
-// 	return len(name), strings.ToUpper(name)
-// }
-
-// func lenAndUpper(name string) (length int, uppercase string) { //naked return
-// 	defer fmt.Println("I'm done")
-// 	length = len(name)
-// 	uppercase = strings.ToUpper(name)
-// 	return
-// }
-
-// func repeatMe(words ...string) {
-// 	fmt.Println(words)
-// }
-
-// func superAdd(numbers ...int) int {
-// 	total := 0
-// 	for _, number := range numbers { //변수 하나만 하면 인덱스만 출력.
-// 		total += number
-// 	}
-// 	return total
-// }
-
-// func canIDrink(age int) bool {
-// 	switch koreanAge := age + 2; koreanAge {
-// 	case 10:
-// 		return false
-// 	case 18:
-// 		return true
-// 	}
-
-// 	switch {
-// 	case age < 18:
-// 		return false
-// 	case age >= 18:
-// 		return true
-// 	}
-
-// 	return false
-// }
-
 func main() {
-	a := 2
-	b := &a // 주소 참조
-	c := a  // 값 복사
-	*b = 20 //주소 참조값 변경
-	fmt.Println(&a, a)
-	fmt.Println(b, *b)
-	fmt.Println(&c, c)
-
+	names := []string{"nico", "lynn", "dal"} //[]에 숫자 적으면 길이가 정해진 array, 숫자 안적으면 가변 배열 slice
+	// names[3] = "alal" // 정해진 곳에 값 넣을 때
+	// names[4] = "ie"
+	names = append(names, "ala") // slice 현재 길이 이상에 값 추가할 때
+	names[2] = "jeongsoep"
+	fmt.Println(names)
 }
