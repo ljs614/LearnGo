@@ -25,24 +25,31 @@ import "fmt"
 // 	return total
 // }
 
-func canIDrink(age int) bool {
-	switch koreanAge := age + 2; koreanAge {
-	case 10:
-		return false
-	case 18:
-		return true
-	}
+// func canIDrink(age int) bool {
+// 	switch koreanAge := age + 2; koreanAge {
+// 	case 10:
+// 		return false
+// 	case 18:
+// 		return true
+// 	}
 
-	switch {
-	case age < 18:
-		return false
-	case age >= 18:
-		return true
-	}
+// 	switch {
+// 	case age < 18:
+// 		return false
+// 	case age >= 18:
+// 		return true
+// 	}
 
-	return false
-}
+// 	return false
+// }
 
 func main() {
-	fmt.Println(canIDrink(16))
+	a := 2
+	b := &a // 주소 참조
+	c := a  // 값 복사
+	*b = 20 //주소 참조값 변경
+	fmt.Println(&a, a)
+	fmt.Println(b, *b)
+	fmt.Println(&c, c)
+
 }
